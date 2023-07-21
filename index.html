@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Home</title>
+
+    <link rel="icon" type="image/x-icon" href="/Images/butterfly.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .margin0 {
+        margin: 0;
+    }
+
+    .padding0 {
+        padding: 0;
+    }
+
+
+    .InterFace {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 50px auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .mainContent {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+    }
+
+    .navigationMenu {
+        height: 100vh;
+    }
+
+    .IconImage {
+        width: 20px;
+
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex_col {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .flex_center_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: space-between;
+        height: 100%;
+        width: 50px;
+        padding: 7px;
+        background-color: #f2f2f244;
+        position: fixed;
+
+    }
+
+    .flex_space {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .navAncor {
+        padding: auto;
+        opacity: 0.8;
+    }
+
+    .activeBTN {
+
+        text-align: center;
+        background-color: #3e2edf;
+        border-radius: 10px;
+        padding: 15px 30px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+
+    }
+
+    .activeAncor {
+        width: 100%;
+        text-align: center;
+        background-color: #3e2edf;
+        border-radius: 7px;
+        padding: 8px 0;
+        opacity: 1;
+    }
+
+
+    .gutterBottom_10x {
+        margin-bottom: 10px;
+    }
+
+    .gutterBottom_15x {
+        margin-bottom: 15px;
+
+    }
+
+    .gutterBottom_20x {
+        margin-bottom: 20px;
+    }
+
+    .gutterBottom_30x {
+        margin-bottom: 30px;
+    }
+
+    .gutterBottom_40x {
+        margin-bottom: 40px;
+    }
+
+    .gutterBottom_50x {
+        margin-bottom: 50px;
+    }
+
+    .inverImageColor {
+        filter: invert(1);
+    }
+
+    .displayBlock {
+        display: block;
+    }
+
+    .icon {
+        opacity: 1;
+        transform: rotateY(180deg) scaleX(1.5) scaleY(1.5);
+    }
+
+    .profile {
+        background-color: #f2f2f2;
+    }
+
+    .income-statergy {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+
+    }
+
+    .income-statergy ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .statergy {
+        padding-right: 4vw;
+        padding-top: 2vw;
+    }
+
+    .fist_stat {
+        background-color: #f2f2f2;
+        padding: 10px 20px;
+        border-radius: 10px;
+
+    }
+
+
+    .flex_center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .span_Op_8 {
+        font-size: 12px;
+        opacity: 0.8;
+    }
+
+    .span_Op_10 {
+        font-size: 12px;
+    }
+
+    .span_Op_6 {
+        font-size: 12px;
+        opacity: 0.6;
+
+    }
+
+    .bolder {
+        font-weight: bolder;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+
+    .textCenter {
+        width: 100%;
+        text-align: center;
+    }
+
+    .AnchorDefaults {
+        text-decoration: none;
+
+    }
+
+    .primary {
+        color: #3e2edf;
+    }
+
+
+
+
+
+
+
+    .profile {
+        padding: 2vw 4vw;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    .profile::-webkit-scrollbar {
+        display: none;
+    }
+
+    .details {
+        width: auto;
+
+        gap: 20px;
+    }
+
+    .profileSpan {
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 1px solid white;
+        -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+
+    }
+
+    .width100 {
+        width: 100%;
+
+    }
+
+    .border_50 {
+        border-radius: 50%;
+    }
+
+    .flex__center {
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    .gap10 {
+        gap: 10px;
+    }
+
+    .relative {
+        position: relative;
+    }
+
+    .absolute {
+        position: absolute;
+    }
+
+    input[type="range"] {
+        -webkit-appearance: none;
+        position: relative;
+        width: 9rem;
+        height: 0.2rem;
+        top: 6px;
+
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+
+
+        box-shadow: 0px 0px 1px #000000;
+        border-radius: 50%;
+        background: #FFFFFF;
+        height: 22px;
+        width: 22px;
+
+    }
+
+
+
+
+
+
+    .secondWorn {
+        padding: 5px 20px;
+        border-left: 2px solid #3e2edf;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .icome {
+        margin: 2vw 6vw;
+    }
+
+
+
+    .boderBottom {
+        border-bottom: 2px solid #3e2edf;
+    }
+
+
+
+    .threeDiv_drid {
+
+        display: grid;
+        grid-template-columns: 0.333fr 0.666fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 3vw;
+    }
+
+    .towDiv_drid {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 3vw;
+
+    }
+
+    .Contributions {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 3vw;
+    }
+
+    .emp_incicator {
+        height: 10px;
+        width: 15px;
+        border-radius: 10px;
+    }
+
+    .Employer-color_1 {
+        background-color: #0300A3;
+        color: #0300A3;
+    }
+
+    .Employer-color_2 {
+        background-color: #4935FF;
+        color: #4935FF;
+    }
+
+    .Employer-color_3 {
+        background-color: #85AFFF;
+        color: #85AFFF;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .grapha {
+        width: 100%;
+        height: 250px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 40px;
+        grid-column-gap: 0px;
+        grid-row-gap: 10px;
+    }
+
+    .first_ROW_graph {
+        display: grid;
+        grid-template-columns: 50px auto;
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+
+    .elme_of_X {}
+
+
+
+    .elme_of_Y {
+        padding-right: 5px;
+
+    }
+
+    .YaxisSpan {
+        text-align: right;
+    }
+
+    .barsDiv {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        transition: all 1s;
+
+    }
+
+    .barDiv {
+        width: 25px;
+        margin-left: 5px;
+        height: 100%;
+    }
+
+    .bar {
+        transition: all 0.2s;
+        width: 25px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .TotalIntrest_bar {
+
+        background-color: #85AFFF;
+    }
+
+    .employee_bar {
+        background-color: #4935FF;
+    }
+
+    .employer_bar {
+        background-color: #0300A3;
+    }
+
+    .font13 {
+        font-size: 12;
+    }
+
+
+    .dotted-hr {
+        border-top: 1px dotted;
+        width: 100%;
+        margin-left: 10px;
+        position: absolute;
+        /* Adjust the margin as needed */
+        z-index: -1;
+
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.441) 60%, rgba(0, 0, 0, 0) 0%);
+        background-position: bottom;
+        background-size: 3px 1px;
+        background-repeat: repeat-x;
+
+    }
+
+    .hr1 {
+        bottom: 0%;
+    }
+
+    .hr2 {
+        bottom: 35%;
+    }
+
+    .hr3 {
+        bottom: 67%;
+    }
+
+    .hr4 {
+        bottom: 100%;
+    }
+
+
+
+
+
+    .back_Circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #baffef;
+        z-index: 0;
+
+
+    }
+
+    .Center_Circle {
+        width: 87%;
+        height: 87%;
+        background-image: conic-gradient(#23D5AA 65deg, #ffffff00 0deg);
+        border-radius: 50%;
+        transform: scaleX(1.2) scaleY(1.2);
+
+
+    }
+
+    .front_Circle {
+        width: 75%;
+        height: 75%;
+
+        background-color: #ffffff;
+        border-radius: 50%;
+
+    }
+
+    .percentHeading {
+        z-index: 5;
+    }
+
+    .peers {
+        display: grid;
+        grid-template-columns: 200px auto;
+        grid-template-rows: auto;
+        grid-column-gap: 5vw;
+        grid-row-gap: 0px;
+    }
+
+    .smallDisplayON {
+        display: none;
+    }
+
+
+
+
+    /*oprimazation and responsiveness*/
+    .income-statergy {
+        max-width: 1500px;
+    }
+
+    @media (max-width: 1400px) {
+        .icome {
+            margin: 2vw 4vw;
+        }
+
+        .statergy {
+            padding-right: 1vw;
+        }
+
+    }
+
+    @media (max-width: 1350px) {
+        .icome {
+            margin: 2vw 3vw;
+        }
+
+        .peers {
+            grid-column-gap: 2vw;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        .income-statergy {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-column-gap: 0px;
+            grid-row-gap: 20px;
+        }
+    }
+
+    @media (min-width:900px) and (max-width: 1250px) {
+        .statergy {
+            padding: 2vw;
+            display: grid;
+            grid-template-columns: auto 150px;
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+
+        }
+
+        .fist_stat {
+            display: grid;
+            grid-template-columns: auto 5px auto;
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .secondWorn {
+            padding-right: 0;
+            height: 249px;
+        }
+
+        .statHr {
+            margin-top: 20px;
+            height: 90%;
+        }
+
+        .makePadingLeft {
+            padding-left: 10px;
+        }
+
+        .profile {
+            padding: 2vw;
+            overflow-y: normal;
+            height: auto;
+        }
+
+        .income-statergy {
+
+            overflow-y: normal;
+            height: auto;
+
+
+        }
+
+
+
+    }
+
+
+
+
+
+
+    /* for mobile and small tabletes */
+
+
+
+    @media (max-width: 900px) {
+
+        .M_flex_center_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .M_flex_col {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+
+        }
+
+        .M_gap5 {
+            gap: 5;
+        }
+
+        .InterFace {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 93vh 7vh;
+            grid-column-gap: 20px;
+        }
+
+        /* Reverse the order of grid items */
+        .grid-item:nth-child(1) {
+            order: 2;
+        }
+
+        .grid-item:nth-child(2) {
+            order: 1;
+        }
+
+        .smallDispayNone {
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 50px;
+            width: 100vw;
+            padding: 0px;
+            background-color: #ffffff;
+            z-index: 10;
+            position: fixed;
+
+        }
+
+        .smallDispayNav {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+        }
+
+        .activeAncor {
+
+            width: auto;
+            padding: 7px;
+        }
+
+        .navigationMenu {
+            height: auto;
+
+        }
+
+        .non-gutterBottom {
+            margin-bottom: 0;
+        }
+
+        .smallDisplayON {
+            display: flex;
+        }
+
+        .mainContent {
+            grid-template-rows: 900px 1900px;
+            grid-template-columns: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+
+        .mainContent::-webkit-scrollbar {
+            display: none;
+        }
+
+        .threeDiv_drid {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-row-gap: 25px;
+            grid-column-gap: 0;
+        }
+
+        .grapha {
+            width: 100%;
+        }
+
+        .peers {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+        }
+
+
+        .profile {
+            background-color: #ffffff;
+        }
+
+        .details {
+            padding: 40px 20px 0px 20px;
+        }
+
+        .Overallicome {
+            background-color: #f2f2f2;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 10px;
+
+        }
+
+        .transactions {
+            background-color: #f2f2f2;
+            border-radius: 30px;
+            padding: 30px;
+            margin: 10px;
+
+
+        }
+
+        .icome {
+            width: 100vw;
+            margin: 0;
+            padding: 30px;
+        }
+
+
+        .barDiv {
+            width: 20px;
+            margin-left: 4px;
+        }
+
+        .bar {
+            width: 20px;
+        }
+
+
+        .first_ROW_graph {
+            grid-template-columns: 30px auto;
+           
+        }
+
+        /*   .navigationMenu{
+            position: absolute;
+            width: 100vw;
+            bottom: 0;
+
+        }
+       
+       */
+    }
+</style>
+
+<body>
+    <div class="smallDisplayON relative">
+        <a class=" navAncor flex_center_center absolute" style="top: 20px; right: 20px;" href="">
+            <img class="IconImage" src="./Images/bell.png" alt="">
+        </a>
+    </div>
+    <div class="InterFace">
+        <section class="navigationMenu grid-item">
+            <nav class="flex_col M_flex_center_center">
+                <div class="upperNav ">
+                    <div class="flex_col gutterBottom_40x smallDispayNone">
+                        <a href="" class="gutterBottom_10x"></a>
+                        <a class="gutterBottom_30x navAncor flex_center_center icon" href="">
+                            <img class="IconImage" src="./Images/butterfly.png" alt="">
+                        </a>
+                        <a class="gutterBottom_30x navAncor flex_center_center" href="">
+                            <img class="IconImage" src="./Images/loupe.png" alt="">
+                        </a>
+                    </div>
+                    <div class="flex_col smallDispayNav">
+                        <a class="gutterBottom_30x non-gutterBottom navAncor flex_center_center activeAncor" href="">
+                            <img class="IconImage inverImageColor" src="./Images/home.png" alt="">
+                        </a>
+                        <a class="gutterBottom_30x non-gutterBottom navAncor flex_center_center" href="">
+                            <img class="IconImage" src="./Images/list.png" alt="">
+                        </a>
+                        <a class="gutterBottom_30x non-gutterBottom navAncor flex_center_center" href="">
+                            <img class="IconImage" src="./Images/tabs.png" alt="">
+                        </a>
+                        <a class="gutterBottom_30x non-gutterBottom navAncor flex_center_center" href="">
+                            <img class="IconImage" src="./Images/user.png" alt="">
+                        </a>
+                        <a class="gutterBottom_30x non-gutterBottom navAncor flex_center_center smallDisplayON  "
+                            href="">
+                            <img class="IconImage" src="./Images/loupe.png" alt="">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="flex_col smallDispayNone">
+                    <a class="gutterBottom_30x navAncor flex_center_center" href="">
+                        <img class="IconImage" src="./Images/bell.png" alt="">
+                    </a>
+                    <a class="gutterBottom_30x navAncor flex_center_center" href="">
+                        <img class="IconImage" src="./Images/exit.png" alt="">
+                    </a>
+
+                </div>
+            </nav>
+        </section>
+
+
+        <div class="mainContent grid-item">
+            <section class="profile">
+                <div class="details flex gutterBottom_40x">
+                    <span class="profileSpan flex_center_center ">
+                        <img src="./Images/profile.jpeg" class=" width100 border_50" alt="">
+                    </span>
+                    <span class="flex_col flex_center">
+                        <h1 class="margin0">Hi Mike,</h1>
+                        <span class="span_Op_8">welcome back.</span>
+                    </span>
+                </div>
+                <div class="Overallicome gutterBottom_30x">
+                    <h3>Today</h3>
+                    <h1 class="margin0 bolder">$19,892</h1>
+                    <span class="gutterBottom_20x displayBlock span_Op_6">Account Balance</span>
+                    <h3 class="margin0 bolder">$4,000</h3>
+                    <span class="gutterBottom_20x displayBlock span_Op_6">Year-To-Date Contribution</span>
+                    <h3 class="margin0 bolder">$1,892</h3>
+                    <span class="gutterBottom_20x displayBlock span_Op_6">Total Interest</span>
+
+                    <button class="activeBTN bold ">I want to ▼</button>
+                </div>
+                <div class="transactions  ">
+                    <h3>Recent Transactions</h3>
+                    <span class="span_Op_6">2020-08-07</span>
+                    <br>
+                    <span class="span_Op_10 bold gutterBottom_15x displayBlock  ">Withdrawal Transfer to
+                        Bank-XX11</span>
+
+                    <hr class="span_Op_6">
+                    <span class="span_Op_6">2020-07-21</span>
+                    <br>
+                    <span class="span_Op_10 bold gutterBottom_15x displayBlock">Withdrawal Transfer to Bank-XX11</span>
+                    <hr class="span_Op_6">
+                    <span class="span_Op_6">2020-07-16</span>
+                    <br>
+                    <span class="span_Op_10 bold gutterBottom_15x displayBlock">Withdrawal Transfer to Bank-XX11</span>
+                    <hr class="span_Op_6">
+                </div>
+            </section>
+
+
+            <section class="income-statergy">
+                <div class="icome ">
+                    <div class="gutterBottom_20x"></div>
+                    <h3 class="primary bolder margin0">Retirement Income</h3>
+                    <h1 class="margin0 gutterBottom_40x">Starting Year 2056</h1>
+                    <div class=" threeDiv_drid gutterBottom_50x">
+                        <div class=" divGoals boderBottom">
+                            <h1 class="margin0">$300,000</h1>
+                            <span class="span_Op_6 gutterBottom_15x displayBlock">My Goal</span>
+                        </div>
+                        <div class="towDiv_drid  ">
+
+                            <div class="divGoals boderBottom">
+                                <h1 class="margin0">59%</h1>
+                                <span class="span_Op_6 gutterBottom_15x displayBlock">Goal Achieved</span>
+                            </div>
+                            <div class="divGoals boderBottom">
+                                <h1 class="margin0">$300</h1>
+                                <span class="span_Op_6 gutterBottom_15x displayBlock">Est. Month Income</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Contribution Overtime</h3>
+                    <div class="Contributions gutterBottom_30x">
+                        <div class=" flex__center M_flex_col gap10 M_gap5 ">
+
+                            <div class="emp_incicator Employer-color_1"></div>
+                            <span class="span_Op_6">Employer:</span>
+                            <span class="" style="font-size: 15px;">K 73,500</span>
+                        </div>
+                        <div class=" flex__center M_flex_col gap10 M_gap5 ">
+                            <div class="emp_incicator Employer-color_2"></div>
+                            <span class="span_Op_6">Employee:</span>
+                            <span class="" style="font-size: 15px;">K 52,500</span>
+                        </div>
+                        <div class=" flex__center M_flex_col gap10 M_gap5 ">
+                            <div class="emp_incicator Employer-color_3"></div>
+                            <span class="span_Op_6">Total Interest:</span>
+                            <span class="" style="font-size: 15px;">K 244,313</span>
+                        </div>
+                    </div>
+
+                    <div class="grapha">
+                        <div class="first_ROW_graph">
+                            <div class="elme_of_Y flex_col flex_space">
+                                <span class=" span_Op_6 dottedBorder YaxisSpan"
+                                    style="position: relative; bottom: 12px;">$300</span>
+                                <span class=" span_Op_6 dottedBorder YaxisSpan"
+                                    style="position: relative; bottom: 5px;">$200</span>
+                                <span class=" span_Op_6 dottedBorder YaxisSpan">$100</span>
+                                <span class=" span_Op_6 dottedBorder YaxisSpan"
+                                    style=" transform: translateY(8px);">$0</span>
+                            </div>
+                            <div class="barsDiv" id="barsDiv">
+
+
+                            </div>
+                        </div>
+                        <div class="elme_of_X flex_space">
+                            <span class="span_Op_6 "></span>
+                            <span class="span_Op_6 ">20</span>
+                            <span class="span_Op_6 ">25</span>
+                            <span class="span_Op_6 ">30</span>
+                            <span class="span_Op_6 ">35</span>
+                            <span class="span_Op_6 ">40</span>
+                            <span class="span_Op_6 ">60</span>
+                            <span class="span_Op_6 ">65</span>
+                        </div>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="margin0">How do I compaire my peers?</h3>
+                        <span class="span_Op_6 gutterBottom_40x displayBlock">These numbers represnets current goal
+                            achivement.</span>
+
+                        <div class="peers ">
+                            <div class="">
+                                <div>
+                                    <span class="span_Op_10">Age:</span>
+                                    <span class="span_Op_10">Under 30 ▼</span>
+                                </div>
+                                <hr class="span_Op_6">
+                                <div>
+                                    <span class="span_Op_10">Salary:</span>
+                                    <span class="span_Op_10">K 20 - K 30 ▼</span>
+                                </div>
+                                <hr class="span_Op_6">
+                                <div>
+                                    <span class="span_Op_10">Gender</span>
+                                    <span class="span_Op_10">Male ▼</span>
+                                </div>
+                                <hr class="span_Op_6">
+                            </div>
+
+                            <div class="circles flex_space">
+
+
+                                <div class="circleDiv flex_col flex_center_center gap10">
+                                    <div class="back_Circle flex_center_center">
+                                        <div class="Center_Circle flex_center_center">
+                                            <span class="front_Circle flex_center_center">
+                                                <h1 class="percentHeading">36%</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="span_Op_8 textCenter  ">Avarage</span>
+                                </div>
+                                <div class="circleDiv flex_col flex_center_center gap10">
+                                    <div class="back_Circle flex_center_center">
+                                        <div class="Center_Circle flex_center_center">
+                                            <span class="front_Circle flex_center_center">
+                                                <h1 class="percentHeading">36%</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="span_Op_8 textCenter  ">Avarage</span>
+                                </div>
+                                <div class="circleDiv flex_col flex_center_center gap10">
+                                    <div class="back_Circle flex_center_center">
+                                        <div class="Center_Circle flex_center_center">
+                                            <span class="front_Circle flex_center_center">
+                                                <h1 class="percentHeading">36%</h1>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <span class="span_Op_8 textCenter  ">Avarage</span>
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="statergy">
+                    <div class="fist_stat gutterBottom_20x">
+                        <div>
+                            <h3>Retirement Startergy</h3>
+                            <label class="span_Op_10 gutterBottom_15x displayBlock">Employ Contribution</label>
+                            <div class="flex_space gutterBottom_30x">
+                                <input type="range" id="volume" name="volume" min="0" max="100">
+                                <span class="span_Op_10" for="volume">30%</span>
+                            </div>
+                            <label class="span_Op_10 gutterBottom_15x displayBlock">Retirement Age</label>
+                            <div class="flex_space gutterBottom_30x">
+                                <input type="range" id="volume" name="volume" min="0" max="100">
+                                <span class="span_Op_10" for="volume">60</span>
+                            </div>
+                        </div>
+                        <hr class="span_Op_6 gutterBottom_20x statHr">
+
+                        <div>
+                            <div class="flex_space gutterBottom_15x">
+                                <span class="span_Op_10">Employer Contribution</span>
+                                <span class="span_Op_10 makePadingLeft">8.4%</span>
+
+                            </div>
+                            <div class="flex_space gutterBottom_30x">
+                                <span class="span_Op_10">Interest Rate</span>
+                                <span class="span_Op_10">5%</span>
+
+                            </div>
+
+                            <button class="activeBTN bold width100 gutterBottom_30x">Update</button>
+                            <br>
+                            <a href=""
+                                class="textCenter gutterBottom_15x displayBlock span_Op_10 primary AnchorDefaults">View
+                                Help Docs ></a>
+                        </div>
+                    </div>
+                    <div class="secondWorn">
+                        <span style="opacity: 0.7; font-weight: 400;"> Are you considering a </span>
+                        <br>
+                        <strong class="bloder  gutterBottom_10x displayBlock"> Housing Advance?</strong>
+
+                        <span class="span_Op_6 gutterBottom_10x displayBlock">Limited Time to Reduce Interest</span>
+                        <a href="" class="displayBlock span_Op_10 primary AnchorDefaults">Learn More ></a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
