@@ -49,6 +49,13 @@ body {
     width: 20px;
 
 }
+.bellIconDot{
+    background-color:#6b9fff;
+width: 9px;
+height: 9px;
+right: 2px;
+top: -7px;
+}
 
 .flex {
     display: flex;
@@ -151,7 +158,7 @@ padding: 5px;
 
 .icon {
     opacity: 1;
-    transform: rotateY(180deg) scaleX(1.5) scaleY(1.5);
+    transform:  scaleX(1.5) scaleY(1.5);
 }
 
 .profile {
@@ -523,6 +530,13 @@ input[type="range"] {
     bottom: 0;
 }
 
+.tickIcon{
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    z-index: 8;
+    border: 2px solid white; 
+}
 .TotalIntrest_bar {
 
     background-color: #85AFFF;
@@ -825,7 +839,7 @@ input[type="range"] {
     }
 
     .smallDisplayON {
-        display: flex;
+        display: block;
     }
 
     .mainContent {

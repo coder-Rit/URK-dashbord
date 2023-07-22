@@ -58,13 +58,11 @@ const staticData = [
   },
 ];
 
-
 window.addEventListener("resize", updateInnerWidth);
 let windowWidth = window.innerWidth;
 
-function updateInnerWidth( ) {
-windowWidth = window.innerWidth;
-  
+function updateInnerWidth() {
+  windowWidth = window.innerWidth;
 }
 
 let ObjStirng = "";
@@ -72,12 +70,26 @@ let ObjStirng = "";
 for (let index = staticData.length - 1; index >= 0; index--) {
   ObjStirng =
     ObjStirng +
-    ` <div class="barDiv">
+    ` <div class="barDiv relative">
+
     <div class="bar TotalIntrest_bar" style="height: ${staticData[index].ti}%;">
     </div>
-    <div class="bar employee_bar" style="height:  ${staticData[index].Employee}%;">
+    <div class="bar employee_bar" style="height:  ${
+      staticData[index].Employee
+    }%;">
     </div>
-    <div class="bar employer_bar" style="height:  ${staticData[index].Employer}%;"></div> 
+    <div class="bar employer_bar" style="height:  ${
+      staticData[index].Employer
+    }%;"></div> 
+
+    ${
+      staticData[index].ti == 100
+        ? ` <img class="IconImage  tickIcon border_50"   src="./Images/tick.png" alt=""></img>`
+        : ""
+    }
+
+   
+
 </div>`;
 }
 ObjStirng =
@@ -96,24 +108,20 @@ if (innerWidth <= 900) {
   reviewPeers.innerHTML = `<a href="./retirement_mobile.html" class="displayBlock span_Op_10 primary AnchorDefaults textCenter">How do I compaire my peers? ></a>`;
 } else {
   fetch("peers.html")
-  .then(response => response.text())
-  .then(data => {
-    peers.innerHTML = data;
-  })
-  .catch(error => {
-    console.error("Error fetching the file:", error);
-  });
-
+    .then((response) => response.text())
+    .then((data) => {
+      peers.innerHTML = data;
+    })
+    .catch((error) => {
+      console.error("Error fetching the file:", error);
+    });
 
   fetch("retirement_desk.html")
-  .then(response => response.text())
-  .then(data => {
-    statergye.innerHTML = data;
-  })
-  .catch(error => {
-    console.error("Error fetching the file:", error);
-  });
-
-
-   
+    .then((response) => response.text())
+    .then((data) => {
+      statergye.innerHTML = data;
+    })
+    .catch((error) => {
+      console.error("Error fetching the file:", error);
+    });
 }

@@ -63,7 +63,8 @@
                 </div>
 
                 <div class="flex_col smallDispayNone">
-                    <a class="gutterBottom_30x navAncor flex_center_center" href="">
+                    <a class="gutterBottom_30x navAncor flex_center_center relative" href="">
+                        <i class="bellIconDot absolute border_50"></i>
                         <img class="IconImage" src="./Images/bell.png" alt="">
                     </a>
                     <a class="gutterBottom_30x navAncor flex_center_center" href="">
@@ -90,7 +91,7 @@
                     <h3>Today</h3>
                     <div>
 
-                        <h1 class="margin0 bolder h01" style="transform: scale3d(1.5,1.5,1.5) translateX(43px);">$19,892
+                        <h1 class="margin0 bolder  " style="font-size: xx-large;">$19,892
                         </h1>
                         <span class="gutterBottom_20x displayBlock span_Op_6">Account Balance</span>
                     </div>
@@ -109,7 +110,11 @@
                         </div>
                     </div>
 
-                    <button class="activeBTN bold M_width100">I want to ▼</button>
+
+
+
+                    <button class="activeBTN bold    width100 smallDisplayON">I want to... </button>
+                    <button class="activeBTN bold M_width100 smallDispayNone">I want to  ▼ </button>
                 </div>
                 <div class="transactions  ">
                     <h3>Recent Transactions</h3>
@@ -188,8 +193,8 @@
                                 <span class=" span_Op_6 dottedBorder YaxisSpan"
                                     style=" transform: translateY(8px);">$0</span>
                             </div>
-                            <div class="barsDiv" id="barsDiv">
-
+                            <div class="barsDiv" id="barsDiv" >
+<!-- bars are comming from javascript -->
 
                             </div>
                         </div>
@@ -211,7 +216,7 @@
                     </div>
 
                     <div id="peers">
-
+                        <!-- peers section -->
                     </div>
 
 
@@ -235,7 +240,8 @@
 
 
     </div>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
+    <script src="/Inputs.js"></script>
 </body>
 
 </html>
