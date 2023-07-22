@@ -306,6 +306,9 @@ bottom: 0px;
     align-items: center;
 }
 
+.width100px{
+    width: 100px;
+}
 
 
 .gap10 {
@@ -871,6 +874,8 @@ input[type="range"] {
         grid-column-gap: 0;
         grid-row-gap: 20px;
     }
+
+   
 
 
     .profile {
