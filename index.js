@@ -58,6 +58,15 @@ const staticData = [
   },
 ];
 
+
+window.addEventListener("resize", updateInnerWidth);
+let windowWidth = window.innerWidth;
+
+function updateInnerWidth( ) {
+windowWidth = window.innerWidth;
+  
+}
+
 let ObjStirng = "";
 
 for (let index = staticData.length - 1; index >= 0; index--) {
@@ -71,15 +80,40 @@ for (let index = staticData.length - 1; index >= 0; index--) {
     <div class="bar employer_bar" style="height:  ${staticData[index].Employer}%;"></div> 
 </div>`;
 }
-ObjStirng = ObjStirng +` <div class="dotted-hr hr1"></div>
+ObjStirng =
+  ObjStirng +
+  ` <div class="dotted-hr hr1"></div>
 <div class="dotted-hr hr2"></div>
 <div class="dotted-hr hr3"></div>
-<div class="dotted-hr hr4"></div>`
-console.log(ObjStirng);
+<div class="dotted-hr hr4"></div>`;
 
 document.getElementById("barsDiv").innerHTML = ObjStirng;
+const statergye = document.getElementById("statergy");
+const reviewPeers = document.getElementById("reviewPeers");
+const peers = document.getElementById("peers");
+
+if (innerWidth <= 900) {
+  reviewPeers.innerHTML = `<a href="./retirement_mobile.html" class="displayBlock span_Op_10 primary AnchorDefaults textCenter">How do I compaire my peers? ></a>`;
+} else {
+  fetch("peers.html")
+  .then(response => response.text())
+  .then(data => {
+    peers.innerHTML = data;
+  })
+  .catch(error => {
+    console.error("Error fetching the file:", error);
+  });
 
 
+  fetch("retirement_desk.html")
+  .then(response => response.text())
+  .then(data => {
+    statergye.innerHTML = data;
+  })
+  .catch(error => {
+    console.error("Error fetching the file:", error);
+  });
 
 
- 
+   
+}
